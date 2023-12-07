@@ -95,38 +95,6 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="module-nico_covariations.utils.SCTransform">
-<span id="nico-covariations-utils-sctransform-module"></span><h2>nico_covariations.utils.SCTransform module<a class="headerlink" href="#module-nico_covariations.utils.SCTransform" title="Link to this heading"></a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="nico_covariations.utils.SCTransform.SCTransform">
-<span class="sig-prename descclassname"><span class="pre">nico_covariations.utils.SCTransform.</span></span><span class="sig-name descname"><span class="pre">SCTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">adata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_cells</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gmean_eps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_genes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_cells</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bw_adjust</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inplace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nico_covariations/utils/SCTransform.html#SCTransform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nico_covariations.utils.SCTransform.SCTransform" title="Link to this definition"></a></dt>
-<dd><p>This is a port of SCTransform from the Satija lab. See the R package for original documentation.</p>
-<p>Currently, only regression against the log UMI counts are supported.</p>
-<p>The only significant modification is that negative Pearson residuals are zero’d out to preserve
-the sparsity structure of the data.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="nico_covariations.utils.SCTransform.gmean">
-<span class="sig-prename descclassname"><span class="pre">nico_covariations.utils.SCTransform.</span></span><span class="sig-name descname"><span class="pre">gmean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nico_covariations/utils/SCTransform.html#gmean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nico_covariations.utils.SCTransform.gmean" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="nico_covariations.utils.SCTransform.is_outlier">
-<span class="sig-prename descclassname"><span class="pre">nico_covariations.utils.SCTransform.</span></span><span class="sig-name descname"><span class="pre">is_outlier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">th</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nico_covariations/utils/SCTransform.html#is_outlier"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nico_covariations.utils.SCTransform.is_outlier" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="nico_covariations.utils.SCTransform.robust_scale_binned">
-<span class="sig-prename descclassname"><span class="pre">nico_covariations.utils.SCTransform.</span></span><span class="sig-name descname"><span class="pre">robust_scale_binned</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">breaks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nico_covariations/utils/SCTransform.html#robust_scale_binned"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nico_covariations.utils.SCTransform.robust_scale_binned" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="nico_covariations.utils.SCTransform.theta_ml">
-<span class="sig-prename descclassname"><span class="pre">nico_covariations.utils.SCTransform.</span></span><span class="sig-name descname"><span class="pre">theta_ml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nico_covariations/utils/SCTransform.html#theta_ml"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nico_covariations.utils.SCTransform.theta_ml" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</section>
 <section id="module-nico_covariations.utils.pyliger_utilities">
 <span id="nico-covariations-utils-pyliger-utilities-module"></span><h2>nico_covariations.utils.pyliger_utilities module<a class="headerlink" href="#module-nico_covariations.utils.pyliger_utilities" title="Link to this heading"></a></h2>
 <dl class="py function">

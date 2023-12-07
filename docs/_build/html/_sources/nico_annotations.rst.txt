@@ -1,6 +1,14 @@
 nico\_annotations package
 =========================
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   nico_annotations.utils
+
 Submodules
 ----------
 

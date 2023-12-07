@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>nico_covariations.utils.pyliger_utilities &mdash; NiCo 1.0.0 documentation</title>
+  <title>nico_annotations.utils.pyliger_utilities &mdash; NiCo 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
 
@@ -61,7 +61,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
-      <li class="breadcrumb-item active">nico_covariations.utils.pyliger_utilities</li>
+      <li class="breadcrumb-item active">nico_annotations.utils.pyliger_utilities</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -70,7 +70,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <h1>Source code for nico_covariations.utils.pyliger_utilities</h1><div class="highlight"><pre>
+  <h1>Source code for nico_annotations.utils.pyliger_utilities</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">scipy.sparse</span> <span class="k">as</span> <span class="nn">sps</span>
 <span class="kn">import</span> <span class="nn">numpy.linalg</span> <span class="k">as</span> <span class="nn">nla</span>
@@ -80,7 +80,7 @@
 
 
 <div class="viewcode-block" id="NMF_obj_eval">
-<a class="viewcode-back" href="../../../nico_covariations.utils.html#nico_covariations.utils.pyliger_utilities.NMF_obj_eval">[docs]</a>
+<a class="viewcode-back" href="../../../nico_annotations.utils.html#nico_annotations.utils.pyliger_utilities.NMF_obj_eval">[docs]</a>
 <span class="k">def</span> <span class="nf">NMF_obj_eval</span><span class="p">(</span><span class="n">Xs</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">Hs</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">Sp</span><span class="p">,</span> <span class="n">Vs</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="s2">&quot;Evaluates NMF objective function (sparsity, Vs optional).&quot;</span>
     <span class="k">if</span> <span class="n">Vs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="n">Vs</span> <span class="o">=</span> <span class="p">[</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="p">(</span><span class="n">Hs</span><span class="p">[</span><span class="n">i</span><span class="p">])[</span><span class="mi">0</span><span class="p">]))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Xs</span><span class="p">))]</span>
@@ -98,7 +98,7 @@
 
 
 <div class="viewcode-block" id="iNMF">
-<a class="viewcode-back" href="../../../nico_covariations.utils.html#nico_covariations.utils.pyliger_utilities.iNMF">[docs]</a>
+<a class="viewcode-back" href="../../../nico_annotations.utils.html#nico_annotations.utils.pyliger_utilities.iNMF">[docs]</a>
 <span class="k">def</span> <span class="nf">iNMF</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span><span class="n">value_lambda</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span><span class="n">thresh</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span><span class="n">max_iters</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span><span class="n">nrep</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">H_init</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">W_init</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">V_init</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">rand_seed</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">print_obj</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="c1">#&quot;Integrated NMF (sparsity optional).&quot;</span>
     <span class="c1">#Ms = [Xs[i].shape[1] for i in range(K)]</span>
@@ -203,7 +203,7 @@
 
 
 <div class="viewcode-block" id="nonneg">
-<a class="viewcode-back" href="../../../nico_covariations.utils.html#nico_covariations.utils.pyliger_utilities.nonneg">[docs]</a>
+<a class="viewcode-back" href="../../../nico_annotations.utils.html#nico_annotations.utils.pyliger_utilities.nonneg">[docs]</a>
 <span class="k">def</span> <span class="nf">nonneg</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="mf">1e-16</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Given a input matrix, set all negative values to be zero &quot;&quot;&quot;</span>
     <span class="n">x</span><span class="p">[</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">eps</span><span class="p">]</span> <span class="o">=</span> <span class="n">eps</span>
@@ -233,7 +233,7 @@
     <span class="n">V</span> <span class="o">=</span> <span class="p">[</span><span class="n">V</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">V</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_samples</span><span class="p">)]</span>
 
     <span class="k">return</span> <span class="n">V</span>
-<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">def _init_V_online(num_cells, num_samples, k, Xs, chunk_size, rand_seed):</span>
 
 <span class="sd">    np.random.seed(seed=rand_seed)</span>
@@ -256,7 +256,7 @@
 <span class="sd">        Vs.append(V)</span>
 
 <span class="sd">    return Vs</span>
-<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">&quot;&quot;&quot;</span>
 
 <span class="k">def</span> <span class="nf">_init_V_online</span><span class="p">(</span><span class="n">num_cell</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">chunk_size</span><span class="p">,</span> <span class="n">rand_seed</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;helper function to initialize a V matrix for online learning&quot;&quot;&quot;</span>
@@ -350,7 +350,7 @@
 <span class="sd">    return V</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <div class="viewcode-block" id="nnlsm_blockpivot">
-<a class="viewcode-back" href="../../../nico_covariations.utils.html#nico_covariations.utils.pyliger_utilities.nnlsm_blockpivot">[docs]</a>
+<a class="viewcode-back" href="../../../nico_annotations.utils.html#nico_annotations.utils.pyliger_utilities.nnlsm_blockpivot">[docs]</a>
 <span class="k">def</span> <span class="nf">nnlsm_blockpivot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">is_input_prod</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Nonnegativity-constrained least squares with block principal pivoting method and column grouping</span>
 <span class="sd">    Solves min ||AX-B||_2^2 s.t. X &gt;= 0 element-wise.</span>
@@ -478,7 +478,7 @@
 
 
 <div class="viewcode-block" id="normal_eq_comb">
-<a class="viewcode-back" href="../../../nico_covariations.utils.html#nico_covariations.utils.pyliger_utilities.normal_eq_comb">[docs]</a>
+<a class="viewcode-back" href="../../../nico_annotations.utils.html#nico_annotations.utils.pyliger_utilities.normal_eq_comb">[docs]</a>
 <span class="k">def</span> <span class="nf">normal_eq_comb</span><span class="p">(</span><span class="n">AtA</span><span class="p">,</span> <span class="n">AtB</span><span class="p">,</span> <span class="n">PassSet</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Solve many systems of linear equations using combinatorial grouping.</span>
 <span class="sd">    M. H. Van Benthem and M. R. Keenan, J. Chemometrics 2004; 18: 441-450</span>
@@ -552,7 +552,7 @@
 
 
 <div class="viewcode-block" id="column_group_sub">
-<a class="viewcode-back" href="../../../nico_covariations.utils.html#nico_covariations.utils.pyliger_utilities.column_group_sub">[docs]</a>
+<a class="viewcode-back" href="../../../nico_annotations.utils.html#nico_annotations.utils.pyliger_utilities.column_group_sub">[docs]</a>
 <span class="k">def</span> <span class="nf">column_group_sub</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
     <span class="n">vec</span> <span class="o">=</span> <span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">cols</span><span class="p">]</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cols</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
