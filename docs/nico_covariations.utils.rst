@@ -4,14 +4,6 @@ nico\_covariations.utils package
 Submodules
 ----------
 
-nico\_covariations.utils.SCTransform module
--------------------------------------------
-
-.. automodule:: nico_covariations.utils.SCTransform
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 nico\_covariations.utils.pyliger\_utilities module
 --------------------------------------------------
 
